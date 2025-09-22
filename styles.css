@@ -54,18 +54,21 @@ body {
 
 .message {
   background: #fce700;
-  bottom: 50px;
+  bottom: 20px; /* lo subí un poco para no tapar tanto */
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 14px; /* más pequeño que 20px */
   font-style: normal;
-  font-weight: 800;
-  height: 60px;
-  line-height: 1;
-  padding: 10px;
+  font-weight: 700;
+  height: auto; /* deja que la altura se adapte al texto */
+  line-height: 1.2; /* más legible */
+  padding: 6px 10px; /* menos padding */
   position: absolute;
-  opacity: 0; /* El elemento empieza invisible */
+  opacity: 0; 
   animation: fadeIn 1s forwards;
-  animation-delay: 2s; /* El elemento aparecerá después de 2 segundos */
+  animation-delay: 2s;
+  border-radius: 8px; /* opcional: que se vea más bonito */
+  max-width: 90%; /* evita que se salga de la pantalla */
+  text-align: center; /* centrado si el texto es corto */
 }
 
 @keyframes fadeIn {
