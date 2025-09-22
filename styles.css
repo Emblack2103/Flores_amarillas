@@ -54,22 +54,32 @@ body {
 
 .message {
   background: #fce700;
-  bottom: 20px; /* lo subí un poco para no tapar tanto */
+  bottom: 5vh; /* se ajusta según altura de pantalla */
   font-family: "Poppins", sans-serif;
-  font-size: 14px; /* más pequeño que 20px */
+  font-size: 6vw; /* tamaño relativo al ancho de la pantalla */
   font-style: normal;
-  font-weight: 700;
-  height: auto; /* deja que la altura se adapte al texto */
-  line-height: 1.2; /* más legible */
-  padding: 6px 10px; /* menos padding */
+  font-weight: 800;
+  line-height: 1.2; /* para que no se corte en varias líneas */
+  padding: 1vh 2vw; /* padding relativo */
   position: absolute;
-  opacity: 0; 
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* empieza invisible */
   animation: fadeIn 1s forwards;
   animation-delay: 2s;
-  border-radius: 8px; /* opcional: que se vea más bonito */
-  max-width: 90%; /* evita que se salga de la pantalla */
-  text-align: center; /* centrado si el texto es corto */
+  text-align: center;
+  max-width: 90vw; /* evita que se salga de la pantalla */
+  word-wrap: break-word; /* que haga salto de línea si es necesario */
 }
+
+/* Opcional: ajustar aún más para móviles muy pequeños */
+@media screen and (max-width: 480px) {
+  .message {
+    font-size: 8vw;
+    padding: 2vh 3vw;
+  }
+}
+
 
 @keyframes fadeIn {
   to {
@@ -1377,3 +1387,4 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }/*# sourceMappingURL=main.css.map */
+
